@@ -1,0 +1,26 @@
+{
+  "name": "gh-notify",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [
+    "gh",
+    "github",
+    "notify",
+    "notification",
+    "notifications"
+  ],
+  "author": {
+    "name": "Derek Tata",
+    "email": "derekjtata@gmail.com",
+    "url": "https://github.com/derektata"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "octokit": "^1.7.0"
+  }
+}
