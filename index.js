@@ -1,5 +1,4 @@
-#!/usr/bin/env node
-
+process.chdir(__dirname);
 require('dotenv').config()
 const { Octokit } = require("octokit");
 
