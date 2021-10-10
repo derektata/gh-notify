@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node index.js",
     "build": "./scripts/build",
-    "clean": "rm -r ./bin/gh-notify"
+    "clean": "rm -r ./bin"
   },
   "keywords": [
     "gh",
