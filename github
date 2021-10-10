@@ -1,0 +1,6 @@
+#!/bin/sh
+
+ALERTS=$(cat /tmp/gh-notify.txt)
+
+node ./scripts/gh-notify/index.js
+echo "  $ALERTS"
