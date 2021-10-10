@@ -26,7 +26,7 @@ yarn
 
 ## Usage/Building
 
-This program requires that you create a `.env` file in the base directory of the project
+This program requires that you create a `.env` file in the root of the project directory
 and add your personal api token:
 ```bash
 GITHUB_TOKEN=YourSpecialGithubTokenHere
