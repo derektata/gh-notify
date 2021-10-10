@@ -1,12 +1,13 @@
 #!/bin/sh
 
 ALERTS=$(cat /tmp/gh-notify.txt)
-NET=$(ip route get 1.1.1.1 | grep -Po '(?<=dev\s)\w+' | cut -f1 -d ' ')
 
-if [ ! "$NET" ]; then
-  echo "  Connecting to Github..."
-else
+if ping -q -c 1 -W 1 8.8.8.8 >/dev/null; then
+  # wifi
   node ./scripts/gh-notify/index.js
   sleep 1s;
   echo "  $ALERTS"
+else
+  # no wifi
+  echo "  Connecting to Github..."
 fi
