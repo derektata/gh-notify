@@ -1,5 +1,9 @@
+#!/usr/bin/env node
+
 process.chdir(__dirname);
+
 require('dotenv').config()
+const fs = require('fs')
 const { Octokit } = require("octokit");
 
 const octokit = new Octokit({
@@ -7,9 +11,14 @@ const octokit = new Octokit({
 });
 
 async function run() {
+  // get the latest notifications
   const response = await octokit.request('GET /notifications')
 
-  console.log(`  ${response.data.length}`)
+  // write the response to the console
+  // console.log(`  ${response.data.length}`)
+
+  // write the response.data.length as a string to the file
+  fs.writeFileSync('/tmp/gh-notify.txt', response.data.length.toString())
 }
 
 run();
