@@ -9,6 +9,5 @@ if [ ! "$NET" ]; then
 else
   # wifi
   node ./scripts/gh-notify/index.js
+  echo "  $ALERTS"
 fi
-
-echo "  $ALERTS"
