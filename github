@@ -4,7 +4,7 @@ ALERTS=$(cat /tmp/gh-notify.txt)
 
 if ping -q -c 1 -W 1 8.8.8.8 >/dev/null; then
   # wifi
-  node ./scripts/gh-notify/index.js
+  cd ./scripts/gh-notify && ./gh-notify
   sleep 1s;
   echo "  $ALERTS"
 else
