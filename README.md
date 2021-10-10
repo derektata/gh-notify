@@ -35,9 +35,6 @@ or build it using:
 
 ```bash
 yarn build
-
-npm build
-
 ```
 
 This will run the `build` script inside of `scripts`, and automatically build a binary for your system.
