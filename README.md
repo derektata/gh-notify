@@ -38,7 +38,7 @@ or if nested in, let's say for example `~/.config/eww/scripts`, then it would be
 ```
 node ./scripts/gh-notify/index.js
 ```
-like in the afforementioned shell script.
+like in the aforementioned shell script.
 
 
 [eww]:https://github.com/elkowar/eww
