@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js",
+    "build": "./scripts/build",
+    "clean": "rm -r ./bin/gh-notify"
   },
   "keywords": [
     "gh",
@@ -22,5 +24,8 @@
   "dependencies": {
     "dotenv": "^10.0.0",
     "octokit": "^1.7.0"
+  },
+  "devDependencies": {
+    "pkg": "^5.3.3"
   }
 }
