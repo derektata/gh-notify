@@ -1,5 +1,12 @@
 # gh-notify
 
+A status-bar agnostic Github Notification ticker
+
+![gh-notify](./_examples/gh-notify.png)
+
+I'm currently using this with [eww]
+
+
 ## Run Locally
 
 Clone the project
@@ -16,6 +23,7 @@ Install dependencies
 ```bash
 yarn
 ```
+
 ## Usage/Building
 
 This program requires that you create a `.env` file in the base directory of the project
