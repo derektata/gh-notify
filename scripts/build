@@ -1,0 +1,19 @@
+#!/bin/sh
+
+os=$(uname -s | tr "[:upper:]" "[:lower:]")
+arch=$(uname -m | tr "[:upper:]" "[:lower:]")
+
+case $os in
+  linux) platform="linux" ;;
+  darwin) platform="macos" ;;
+esac
+
+case $arch in
+  x86_64) architecture=x64 ;;
+  arm64) architecture=arm64 ;;
+esac
+
+yarn pkg index.js --targets "latest-"$platform-$architecture
+mkdir -p ./bin/gh-notify
+mv index ./bin/gh-notify/gh-notify
+cp .env ./bin/gh-notify
