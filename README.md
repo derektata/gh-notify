@@ -28,7 +28,7 @@ yarn
 
 This program requires that you create a `.env` file in the base directory of the project
 and add your personal api token:
-```
+```bash
 GITHUB_TOKEN=YourSpecialGithubTokenHere
 ```
 The included `github` shell script is the one I'm using with [eww].
