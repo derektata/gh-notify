@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-process.chdir(__dirname);
+// process.chdir(__dirname);
 
 require('dotenv').config()
 const fs = require('fs')
