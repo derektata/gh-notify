@@ -1,13 +1,14 @@
 #!/bin/sh
 
 ALERTS=$(cat /tmp/gh-notify.txt)
+NET=$(cat < /dev/null > /dev/tcp/8.8.8.8/53; echo $?)
 
-if ping -q -c 1 -W 1 8.8.8.8 >/dev/null; then
+if [ "$NET" -gt 0 ]; then
+  # no wifi
+  echo "  Connecting to Github..."
+else
   # wifi
   cd ./scripts/gh-notify && ./gh-notify
   sleep 1s;
   echo "  $ALERTS"
-else
-  # no wifi
-  echo "  Connecting to Github..."
 fi
