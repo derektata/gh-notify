@@ -45,7 +45,7 @@ or build it using:
 yarn build
 ```
 
-This will run the `build` script inside of `scripts`, and automatically build a binary for your system.
+This will run the `build` script inside of `scripts`, and automatically build a binary using the latest version of `node` for your system.
 Once that is finished, the binary will be located inside `bin`.
 
 Building also copies your `.env` file from the project's root into the binaries directory.
