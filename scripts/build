@@ -16,4 +16,4 @@ esac
 yarn pkg index.js --targets "latest-"$platform-$architecture
 mkdir -p ./bin/gh-notify
 mv index ./bin/gh-notify/gh-notify
-cp .env ./bin/gh-notify
+cp config.json ./bin/gh-notify
