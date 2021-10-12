@@ -2,12 +2,13 @@
 
 // process.chdir(__dirname);
 
-require('dotenv').config()
+const config = require('./config.json')
+const defaultConfig = config.ghNotify;
 const fs = require('fs')
 const { Octokit } = require("octokit");
 
 const octokit = new Octokit({
-  auth: process.env.GITHUB_TOKEN,
+  auth: defaultConfig.token,
 });
 
 async function run() {
