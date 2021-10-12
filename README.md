@@ -28,10 +28,14 @@ yarn
 
 **WARNING**: I did not include rate limiting in this project, because my configuration is set to run at regulated intervals, and it's well under the amount of API calls per hour limit.
 
-**NOTE**: This program requires that you create a `.env` file in the root of the project directory
+**NOTE**: This program requires that you create a `config.json` file in the root of the project directory
 and add your personal api token:
-```bash
-GITHUB_TOKEN=YourSpecialGithubTokenHere
+```json
+{
+  "ghNotify": {
+    "token": "YourSpecialGithubAPITokenHere"
+  }
+}
 ```
 The included `github` shell script is the one I'm using with [eww].
 
