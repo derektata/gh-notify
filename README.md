@@ -28,7 +28,7 @@ yarn
 
 **WARNING**: I did not include rate limiting in this project, because my configuration is set to run at regulated intervals, and it's well under the amount of API calls per hour limit.
 
-**NOTE**: This program requires a `config.json` in the root of the project/binary directory to run properly. Running the build script will first run `./scripts/config`, generate a `config.json` file, and ask you for your personal Github API token. Then it will run `./scripts/build` and automatically build a binary using the latest version of `node` for your system. After that is finished, the binary/config will be located inside `bin`.
+**NOTE**: This program requires a `config.json` in the root of the project/binary directory to run properly.
 
 Example `config.json`:
 ```json
@@ -38,7 +38,12 @@ Example `config.json`:
   }
 }
 ```
-The included `github` shell script is the one I'm using with [eww].
+
+Running the build script will first run `./scripts/config`, generate a `config.json` file, and ask you for your personal Github API token.
+
+Then it will run `./scripts/build` and automatically build a binary using the latest version of `node` for your system.
+
+After that is finished, the binary/config will be located inside `bin`.
 
 You can either run this from the project's directory, using:
 
@@ -51,5 +56,13 @@ or build it using:
 ```bash
 yarn build
 ```
+
+then you can run it using:
+
+```bash
+./gh-notify
+```
+
+The included `github` shell script is the one I'm using with [eww].
 
 [eww]:https://github.com/elkowar/eww
