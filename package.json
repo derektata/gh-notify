@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "build": "./scripts/build",
+    "build": "yarn run config && yarn run make:bin",
+    "config": "./scripts/config",
+    "make:bin": "./scripts/build",
     "clean": "rm -r ./bin"
   },
   "keywords": [
