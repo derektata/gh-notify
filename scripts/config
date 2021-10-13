@@ -1,0 +1,17 @@
+#!/bin/sh
+
+configFile='./config.json'
+
+if [ -f "$configFile" ];then
+  exit 0
+else
+  cp ./_examples/config.json .
+  cat <<EOF
+
+  Please enter your personal Github API token:
+
+EOF
+  read -r input
+  sed -i "s/YourSpecialGithubAPITokenHere/$input/g" "$configFile"
+  printf "\nSetup complete!\n"
+fi
