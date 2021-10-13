@@ -13,5 +13,5 @@ else
 EOF
   read -r input
   sed -i "s/YourSpecialGithubAPITokenHere/$input/g" "$configFile"
-  printf "\nSetup complete!\n"
+  printf "\nConfig complete!\n"
 fi
